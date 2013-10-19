@@ -1,0 +1,17 @@
+  CHK     include/linux/version.h
+make[1]: Nothing to be done for `arch/arm/boot/dtbs'.
+  CHK     include/generated/utsrelease.h
+make[1]: `include/generated/mach-types.h' is up to date.
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      fs/exfat/exfat_core.o
+  CC      fs/exfat/exfat_api.o
+  CC      fs/exfat/exfat_blkdev.o
+  CC      fs/exfat/exfat_cache.o
+  CC      fs/exfat/exfat_super.o
+fs/exfat/exfat_super.c: In function 'exfat_free_super':
+fs/exfat/exfat_super.c:1716:20: error: 'struct exfat_sb_info' has no member named 's_lock'
+make[2]: *** [fs/exfat/exfat_super.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [fs/exfat] Error 2
+make: *** [fs] Error 2
